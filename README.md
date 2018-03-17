@@ -20,3 +20,8 @@
 
 
 ## Screen shots of project
+
+
+![souq1](https://user-images.githubusercontent.com/5953865/37556538-c28d93ea-2a1d-11e8-8c28-42e480b5b8d8.PNG)
+
+![souq2](https://user-images.githubusercontent.com/5953865/37556545-cd28cc84-2a1d-11e8-8500-77d91d605b41.PNG)
