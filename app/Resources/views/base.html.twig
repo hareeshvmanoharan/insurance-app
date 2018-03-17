@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" />
+            <style>
+                body {
+                    background-color: #e8eaed;
+                }
+                #users_dob_month,  #users_dob_day, #users_dob_year {
+                    display: block;
+                    width: 33.3%;
+                    height: 34px;
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    line-height: 1.42857143;
+                    color: #555;
+                    background-color: #fff;
+                    background-image: none;
+                    border: 1px solid #ccc;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                    float: left;
+                }
+                .margin-top-25 {
+                    margin-top : 25px;
+                }
+                .form-control {
+                    border-radius : 0!important;
+                    box-shadow: none!important;
+                }
+
+                .container {
+                    background-color: #ffffff;
+                    margin-top: 25px;
+                    padding: 20px;
+                }
+
+                .form-group ul li {
+                    color : darkred;
+                }
+
+                .form-group label {
+                    color: #767676;
+                }
+
+                .h-style {
+                    color : #746f6f;
+                    text-align: center;
+                }
+
+
+                .enable-row {
+                    background-color: #acccb3;
+                }
+                .disable-row {
+                    background-color: #c6c6c6;
+                }
+                .card-top {
+                    width :55%;
+                    margin-left: 22%;
+                }
+
+                .avilability-h {
+                    font-weight: bold;
+                    color: #b9bb72;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            </style>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+    <div class="wrapper">
+
+        <div class="container">
+            <h2 class="text-center h-style">Generic Insurance Quotation System</h2>
+            <hr>
+        {% block body %}{% endblock %}
+        </div>
+    </div>
+        {% block javascripts %}
+            <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+
+    </body>
+</html>

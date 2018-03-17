@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <div class="row">
+
+
+        <div class="col-md-4">
+            <div class="card-group">
+                <div class="card">
+                    <img class="card-img-top card-top" src="{{ asset('images/user1.png') }}" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{{ user.name }}</h4>
+                        <p class="card-text">Born on {{ user.dob }}</p>
+                        <p class="card-text">Mail me @  <strong>{{ user.email }}</strong></p>
+                    </div>
+                    <div class="card-footer">Call me @ <strong>{{ user.phone }}</strong>
+                    </div>
+                </div>
+            </div>
+            <a type="button" href="/"  class="btn btn-default pull-right" style="border: 1px solid #ddd;
+    margin-top: 10px;">Back</a>
+        </div>
+        <div class="col-md-8">
+
+            <h4 class="avilability-h">Insurance availability</h4>
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th>Insurance provider</th>
+                    <th>Base price [AED]</th>
+                    <th>Premium amount [AED]</th>
+                    <th>Eligibility</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in premiums %}
+                    <tr class="{{ item.enable == 'true' ? 'enable-row' : 'disable-row' }}">
+                        <td class="font-weight-bold">{{ item.name }}</td>
+                        <td>{{ item.basePrice }}</td>
+                        <td>{{ item.premium }}</td>
+                        <td>
+                            {%  if item.enable == 'true' %}
+                                <input type="button" value="Buy now" class="btn-success btn btn-sm">
+                            {% endif %}
+                            {%  if item.enable == 'false' %}
+                                <span class="label label-default">Not Eligible</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+    <div class="row"> </div>
+
+
+
+{% endblock %}
+
+
