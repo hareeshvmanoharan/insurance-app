@@ -1,14 +1,14 @@
 Generic Insurance Quotation System
 
 
-Software Requirements
+##Software Requirements
 
 1.	WAMP Server / LAMP Server
 2.	Composer
 3.	Git (Optional)
 4.	Symfony 3
 
-Steps to build project locally  
+##Steps to build project locally  
 
 1.	Clone / Download project ( Clone will ask for key, let me know if you want)
 2.	Run composer install (It will install dependencies)
