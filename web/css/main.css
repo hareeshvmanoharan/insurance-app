@@ -19,9 +19,11 @@ body {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     float: left;
 }
+
 .margin-top-25 {
     margin-top : 25px;
 }
+
 .form-control {
     border-radius : 0!important;
     box-shadow: none!important;
